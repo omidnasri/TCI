@@ -1,0 +1,21 @@
+﻿@model IEnumerable<TCI.Model.Ocdf>
+
+<H2>
+    OCDF
+</H2>
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelview => item.OcdfId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelview => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Details", MVC.Ocdf.Details(item.OcdfId))
+            </td>
+        </tr>
+    }
+</table>

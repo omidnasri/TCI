@@ -53,11 +53,17 @@
     <Compile Include="Domain\Ctr\Letter\TemporaryDelivery.cs" />
     <Compile Include="Domain\Fiber\Cable.cs" />
     <Compile Include="Domain\Fiber\CableRoom.cs" />
+    <Compile Include="Domain\Fiber\Cassette.cs" />
+    <Compile Include="Domain\Fiber\Core.cs" />
     <Compile Include="Domain\Fiber\FiberPlan.cs" />
     <Compile Include="Domain\Fiber\LineSystem.cs" />
+    <Compile Include="Domain\Fiber\LineSystemItem.cs" />
+    <Compile Include="Domain\Fiber\Loz.cs" />
     <Compile Include="Domain\Fiber\Ocdf.cs" />
     <Compile Include="Domain\Fiber\OcdfLink.cs" />
+    <Compile Include="Domain\Fiber\OcdfRoom.cs" />
     <Compile Include="Domain\Fiber\Odf.cs" />
+    <Compile Include="Domain\Fiber\OdfItem.cs" />
     <Compile Include="Domain\Fiber\Section.cs" />
     <Compile Include="Domain\Fiber\Station.cs" />
     <Compile Include="Domain\Frm\Cluser\CluserPost.cs" />

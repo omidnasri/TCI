@@ -55,11 +55,13 @@
     <Compile Include="Fiber\Interface\IFiberPlanOperation.cs" />
     <Compile Include="Fiber\Interface\ILineSystemOperation.cs" />
     <Compile Include="Fiber\Interface\IOcdfOperation.cs" />
+    <Compile Include="Fiber\Interface\IOcdfRoomOperation.cs" />
     <Compile Include="Fiber\Interface\IOdfOperation.cs" />
     <Compile Include="Fiber\Interface\ISectionOperation.cs" />
     <Compile Include="Fiber\Interface\IStationOperation.cs" />
     <Compile Include="Fiber\LineSystemOperation.cs" />
     <Compile Include="Fiber\OcdfOperation.cs" />
+    <Compile Include="Fiber\OcdfRoomOperation.cs" />
     <Compile Include="Fiber\OdfOperation.cs" />
     <Compile Include="Fiber\SectionOperation.cs" />
     <Compile Include="Fiber\StationOperation.cs" />

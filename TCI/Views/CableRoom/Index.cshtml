@@ -1,0 +1,33 @@
+﻿@model IEnumerable<TCI.Model.CableRoom>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            نام
+        </th>
+        <th>
+            station Id
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.Name
+        </td>
+        <td>
+            ...
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.CableRoomId }) |*@
+            @*@Html.ActionLink("Details", "Details", new { id=item.CableRoomId }) |*@
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.CableRoomId })*@
+        </td>
+    </tr>
+}
+
+</table>

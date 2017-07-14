@@ -1,0 +1,11 @@
+﻿@model TCI.Model.Station
+
+<div>
+    @Html.Action("Index", "CableRoom", new { stationId = @Model.StationId })
+</div>
+<div>
+    @Html.Action("Index", "OcdfRoom", new { stationId = @Model.StationId })
+</div>
+<div>
+    @Html.Action("StationFreeCable", "Cable", new { stationId = @Model.StationId })
+</div>

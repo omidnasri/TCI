@@ -2,7 +2,7 @@
 
 namespace TCI.Model.Types.Station
 {
-    public abstract class Station
+    public abstract class StationType
     {
         public abstract bool HaveCableRoom { get; }
         public abstract bool HaveOcdf { get; }

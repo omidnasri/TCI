@@ -1,0 +1,34 @@
+﻿@model IEnumerable<TCI.Model.Station>
+
+<H1>
+    Stations
+</H1>
+<H5>
+    @*@Html.ActionLink("Create New", "Create")*@
+</H5>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StationId)
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { stationId = item.StationId }) |*@
+                @Html.ActionLink("Details", MVC.Station.Details(item.StationId ))
+                @*@Html.ActionLink("Delete", "Delete", new { stationId = item.StationId })*@
+            </td>
+        </tr>
+    }
+
+</table>

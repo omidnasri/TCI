@@ -1,0 +1,9 @@
+﻿@model TCI.Model.OcdfRoom
+
+<h2>
+    @Model.OcdfRoomId
+    @Model.Name
+</h2>
+<div>
+    @Html.Action("Index", "Ocdf", new { OcdfRoomId = Model.OcdfRoomId })
+</div>

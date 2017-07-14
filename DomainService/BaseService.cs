@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
@@ -11,7 +12,7 @@ namespace TCI.DomainService
     public abstract class BaseService<TEntity> : IBaseService<TEntity>
         where TEntity : BaseEntity
     {
-        private IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IDbSet<TEntity> _entities;
 
         protected BaseService(IUnitOfWork unitOfWork)
@@ -20,14 +21,22 @@ namespace TCI.DomainService
             _entities = unitOfWork.DbSet<TEntity>();
         }
 
-        public IQueryable<TEntity> GetAll()
+        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null)
         {
-            return _entities;
+            return predicate == null ? _entities : _entities.Where(predicate);
         }
 
-        public TEntity GetFirst(Expression<Func<TEntity, bool>> predicate = null)
+        public TEntity GetFirst(Expression<Func<TEntity, bool>> predicate = null, List<string> includePaths = null)
         {
-            return predicate == null ? _entities.First() : _entities.Where(predicate).First();
+            var query = _entities.AsNoTracking();
+            if (includePaths != null)
+            {
+                foreach (var include in includePaths)
+                {
+                    query = query.Include(include);
+                }
+            }
+            return predicate == null ? query.First() : query.Where(predicate).First();
         }
 
         public void Add(TEntity entity)

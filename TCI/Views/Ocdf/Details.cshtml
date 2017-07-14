@@ -1,0 +1,187 @@
+﻿@model TCI.Model.Ocdf
+
+<link href="~/Content/Ocdf.css" rel="stylesheet" type="text/css" />
+
+<H2>
+    @Model.OcdfId
+    @Model.Name
+</H2>
+<table>
+    <tr>
+        <td class="cables">
+            @foreach (var cable in Model.Cables)
+            {
+                <table class="cable-hole">
+                    <tr>
+                        <td>
+                            <div class="cable-title">
+                                @Html.DisplayFor(modelview => cable.FullName)
+                            </div>
+                        </td>
+                        <td>
+                            <div style="overflow: auto; height: 100%;">
+                                <svg height="100%" width="70px" id='svg' viewBox="0 0 20 20" preserveAspectRatio="none">
+                                    <polyline points="20,0 10,10 0,10 10,10 20,20" class="cable-line"/>
+                                </svg>   
+                            </div>
+                        </td>
+                        <td>
+                            <div class="cable">
+
+                                @foreach (var loz in cable.Lozes)
+                                {
+                                    <div>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelview => loz.Number)
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <svg height="16" width="60" id='svg'>
+                                                            <polyline points="60,8 40,8 30,3 0,3 0,13 30,13 40,8 60,8" class="lozitem" />
+                                                        </svg>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="lozitemline"></div>
+                                                </td>
+                                                <td>
+                                                    @foreach (var coreGroup in loz.CoreGroups)
+                                                    {
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="coreitemgroup">
+                                                                        @Html.DisplayFor(modelview => coreGroup.Number)
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div>
+                                                                        <svg height="16" width="60" id='svg'>
+                                                                            <polyline points="60,8 40,8 30,3 0,3 0,13 30,13 40,8 60,8" class="coreitem" />
+                                                                        </svg>
+                                                                    </div>
+
+                                                                    <div>
+                                                                        <svg height="16" width="60" id='svg'>
+                                                                            <polyline points="60,8 40,8 30,3 0,3 0,13 30,13 40,8 60,8" class="coreitem" />
+                                                                        </svg>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    }
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            }
+        </td>
+        <td class="space-between-cable-and-section"></td>
+        <td class="sections">
+            @foreach (var section in Model.Sections)
+            {
+                <div class="section">
+                    <div class="section-header">
+                        @Html.DisplayFor(modelView => @section.Name)
+                    </div>
+                    <div>
+                        @foreach (var cassette in section.Cassettes)
+                {
+                            <div class="cassette">
+                                <div class="cassette-header">
+                                    @Html.DisplayFor(modelView => @cassette.Name)
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </td>
+        <td class="space-between-section-and-odf"></td>
+        <td class="odfs">
+            @foreach (var odf in Model.Odfs)
+            {
+                <div class="odf">
+                    <div class="odf-header">
+                        @Html.DisplayFor(modelview => odf.Name)
+                    </div>
+                    @foreach (var odfItemGroup in odf.OdfItemGroups)
+                    {
+                        <div class="odf-itemgroup">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <svg height="16" width="60" id='svg'>
+                                                <polyline points="0,8 10,8 20,3 60,3 60,13 20,13 10,8 0,8" class="odfitem" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg height="16" width="60" id='svg'>
+                                                <polyline points="0,8 10,8 20,3 60,3 60,13 20,13 10,8 0,8" class="odfitem" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="odf-itemgroup-label">
+                                            @Html.DisplayFor(modelview => odfItemGroup.Number)
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <svg height="16" width="60" id='svg'>
+                                                <polyline points="60,8 50,8 40,3 0,3 0,13 40,13 50,8 60,8" class="odfitem" />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg height="16" width="60" id='svg'>
+                                                <polyline points="60,8 50,8 40,3 0,3 0,13 40,13 50,8 60,8" class="odfitem" />
+                                            </svg>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            @*<div>
+                                    @Html.DisplayFor(modelview => odfItemGroup.FirstOdfItem.OdfItemId)
+                                </div>
+                                <div>
+                                    @Html.DisplayFor(modelview => odfItemGroup.SecondOdfItem.OdfItemId)
+                                </div>*@
+                        </div>
+                    }
+                </div>
+            }
+        </td>
+        <td class="space-between-odf-and-linesystem"></td>
+        <td class="linesystems">
+            @foreach (var lineSystem in Model.LineSystems)
+            {
+                <div class="linesystem">
+                    <div class="linesystem-header">
+                        @Html.DisplayFor(modelview => lineSystem.Name)
+                    </div>
+                    @foreach (var lineSystemItem in lineSystem.LineSystemItems)
+                    {
+                        <div>
+                            <svg height="20" width="70" id='svg'>
+                                <polyline points="0,10 20,10 30,3 70,3 70,17 30,17 20,10 0,10" class="linesystemitem" />
+                            </svg>
+                            @Html.DisplayFor(modelview => lineSystemItem.LineSystemItemId)
+                        </div>
+                    }
+                </div>
+            }
+        </td>
+    </tr>
+</table>

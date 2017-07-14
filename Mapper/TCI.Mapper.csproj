@@ -47,13 +47,22 @@
     <Compile Include="BaseMapper.cs" />
     <Compile Include="Fiber\CableMapper.cs" />
     <Compile Include="Fiber\CableRoomMapper.cs" />
+    <Compile Include="Fiber\CassetteMapper.cs" />
+    <Compile Include="Fiber\CoreMapper.cs" />
     <Compile Include="Fiber\FiberPlanMapper.cs" />
+    <Compile Include="Fiber\LineSystemItemMapper.cs" />
     <Compile Include="Fiber\LineSystemMapper.cs" />
+    <Compile Include="Fiber\LozMapper.cs" />
     <Compile Include="Fiber\OcdfMapper.cs" />
+    <Compile Include="Fiber\OcdfRoomMapper.cs" />
+    <Compile Include="Fiber\OdfItemMapper.cs" />
     <Compile Include="Fiber\OdfMapper.cs" />
     <Compile Include="Fiber\SectionMapper.cs" />
     <Compile Include="Fiber\StationMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resolver\LozResolver.cs" />
+    <Compile Include="Resolver\OcdfResolver.cs" />
+    <Compile Include="Resolver\OdfItemGroupResolver.cs" />
     <Compile Include="Usr\UserMapper.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -17,7 +17,6 @@ namespace TCI.Operation
 
         protected BaseOperation(IBaseService<TEntity> baseService)
         {
-            (new BaseMapper<TEntity, TModel>()).Register();
             BaseService = baseService;
         }
 

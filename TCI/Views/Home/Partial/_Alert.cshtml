@@ -1,0 +1,26 @@
+﻿@model TCI.Models.Persons
+
+<div class="row">
+    @using (@Ajax.BeginForm("Alert", "", new AjaxOptions() { OnSuccess = "SuccessModel" }, new {  }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(z=>z.Id) 
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(z => z.Name)
+                    @Html.TextBoxFor(z => z.Name)
+                    @Html.ValidationMessageFor(z => z.Name, "", new { @class = "text-warning" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    @Html.LabelFor(z => z.Family)
+                    @Html.TextBoxFor(z => z.Family)
+                    @Html.ValidationMessageFor(z=>z.Family, "", new {@class="text-warning"})
+                </div>
+            </div>
+        </div>
+        <input id="btnSave" type="submit" value="Submit" class="hidden" />
+    }
+</div>

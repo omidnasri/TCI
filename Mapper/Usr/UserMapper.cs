@@ -4,9 +4,9 @@ namespace TCI.Mapper.Usr
 {
     public class UserMapper : BaseMapper<Domain.User, Model.User>
     {
-        public override void Register()
+        public override void Initialize()
         {
-            base.Register();
+            base.Initialize();
             EntityToModelMapper
                 .ForMember(s => s.Name, d => d.MapFrom(x => (x.Person as RealPerson).Name))
                 .ForMember(s => s.Family, d => d.MapFrom(x => (x.Person as RealPerson).Family));

@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
@@ -46,10 +47,18 @@
     <Compile Include="Model\Ctr\Executer.cs" />
     <Compile Include="Model\Fiber\Cable.cs" />
     <Compile Include="Model\Fiber\CableRoom.cs" />
+    <Compile Include="Model\Fiber\Cassette.cs" />
+    <Compile Include="Model\Fiber\Core.cs" />
+    <Compile Include="Model\Fiber\CoreGroup.cs" />
     <Compile Include="Model\Fiber\FiberPlan.cs" />
     <Compile Include="Model\Fiber\LineSystem.cs" />
+    <Compile Include="Model\Fiber\LineSystemItem.cs" />
+    <Compile Include="Model\Fiber\Loz.cs" />
     <Compile Include="Model\Fiber\Ocdf.cs" />
+    <Compile Include="Model\Fiber\OcdfRoom.cs" />
     <Compile Include="Model\Fiber\Odf.cs" />
+    <Compile Include="Model\Fiber\OdfItem.cs" />
+    <Compile Include="Model\Fiber\OdfItemGroup.cs" />
     <Compile Include="Model\Fiber\Section.cs" />
     <Compile Include="Model\Fiber\Station.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,7 +72,7 @@
     <Compile Include="Types\Station\Center.cs" />
     <Compile Include="Types\Station\Cluser.cs" />
     <Compile Include="Types\Station\Dlc.cs" />
-    <Compile Include="Types\Station\Station.cs" />
+    <Compile Include="Types\Station\StationType.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resource\ImageResource.resx">

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<TCI.Model.Cable>
+
+<H3>
+    Station Free Cable
+</H3>
+
+@foreach (var item in Model)
+{
+    @Html.DisplayFor(modelitem => item.CableId)
+    @Html.DisplayFor(modelitem => item.Number)
+    @Html.DisplayFor(modelitem => item.FullName)
+}

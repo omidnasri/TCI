@@ -1,0 +1,170 @@
+﻿body {
+    background: white;
+}
+
+.cables {
+    vertical-align: top;    
+}
+
+.cable-hole {
+    margin: 0px 0px 20px 0px;
+}
+
+.cable {
+    border: 2px solid brown;
+    border-left: 0px;
+    width: 200px;
+}
+
+.cable-title {
+    border: 1px solid gray;
+    background: lightcyan;
+    padding: 2px 10px 2px 10px;
+    width: 60px;
+    text-align: center;
+}
+
+.cable-line {
+    stroke: brown;
+    stroke-width: 1px;
+    fill: white;
+}
+
+.lozitem {
+    stroke: brown;
+    background: aqua;
+    stroke-width: 1px;
+    fill: lightpink;
+}
+
+.lozitemline {
+    width: 5px;
+    border: 2px solid red;
+    border-right: 0px;
+    height: 100%;
+    overflow: auto;
+    margin: 0px 0px 0px -5px;
+}
+
+.coreitemgroup {
+    background: cornsilk;
+    border: 1px solid gray;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    margin: 0px 0px 0px 5px;
+}
+
+.coreitem {
+    stroke: brown;
+    background: aqua;
+    stroke-width: 1px;
+    fill: lightpink;
+}
+
+.space-between-cable-and-section {
+    width: 200px;
+}
+
+.sections {
+    vertical-align: top;    
+}
+
+.section {
+    border: 2px solid gray;
+    margin: 0px 0px 20px 0px;
+    background: antiquewhite;
+}
+
+.section-header {
+    background: burlywood;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+}
+
+.cassette {
+    border: 1px solid gray;
+    margin: 2px 50px 2px 5px;
+    background: lightskyblue;
+    height: 40px;
+    width: 100px;
+}
+
+.cassette-header {
+    background: cadetblue;
+    text-align: center;
+    color: blue;
+}
+
+
+.space-between-section-and-odf {
+    width: 250px;
+}
+
+.odfs {
+    vertical-align: top;
+}
+
+.odf {
+    border: 2px solid gray;
+    margin: 0px 0px 20px 0px;
+    background: antiquewhite;
+}
+
+.odf-header {
+    background: burlywood;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+}
+
+.odf-itemgroup {
+}
+
+.odf-itemgroup-label {
+    background: cornflowerblue;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+}
+
+.odfitem {
+    stroke: brown;
+    background: aqua;
+    stroke-width: 1px;
+    fill: lightpink;
+}
+
+.space-between-odf-and-linesystem {
+    width: 200px;
+}
+
+.linesystems {
+    vertical-align: top;
+}
+
+.linesystem {
+    border: 2px solid gray;
+    margin: 0px 0px 20px 0px;
+    background: antiquewhite;
+    width: 130px;
+    padding: 0px 0px 10px 0px;
+}
+
+.linesystem-header {
+    background: burlywood;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+}
+
+.linesystemitem {
+    stroke: brown;
+    background: aqua;
+    stroke-width: 1px;
+    fill: lightpink;
+}
